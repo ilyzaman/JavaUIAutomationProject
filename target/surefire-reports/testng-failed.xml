@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" parallel="tests" name="Login Tests(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="ErrorHandling"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.LoginTests">
+        <methods>
+          <include name="loginWithWrongCredentials"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.LoginTests -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
+  <test thread-count="5" parallel="tests" name="Register Tests(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="ErrorHandling"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.RegisterTests">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="registerWithExistingEmail"/>
+        </methods>
+      </class> <!-- tests.RegisterTests -->
+    </classes>
+  </test> <!-- Register Tests(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
